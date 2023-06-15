@@ -1,0 +1,72 @@
+{% extends 'app/bootstrap.html' %}
+
+{% load bootstrap5 %}
+
+{% block bootstrap5_content %}
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="form_10kreport" style="color: white;">Financial Report Summarization</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="form_10kreport" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="features" style="color: white;">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about" style="color: white;">About</a>
+            </li>
+          </ul>
+          <span class="navbar-text" style="color: white;">
+              AI-Powered Financial Analysis Tool (Preview Version V1.0)
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="container">
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td colspan="2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>About: </h4>
+      <p class="text-left"></p>This demo system is developed by <a href="https://stevenlau6.github.io/">Shuaiqi Liu</a> with love</p>
+      <h5></h5>
+      <div class="container">
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <td colspan="2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4>Contact Me: </h4>
+      <p class="text-left"></p>For enquiries, please contact me at email <a href="mailto:cssqliu@comp.polyu.edu.hk">cssqliu@comp.polyu.edu.hk</a></p>
+        
+    </div>
+
+{% endblock %}

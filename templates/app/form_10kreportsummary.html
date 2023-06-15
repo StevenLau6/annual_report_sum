@@ -1,0 +1,95 @@
+{% extends 'app/bootstrap.html' %}
+
+{% load bootstrap5 %}
+
+{% block bootstrap5_content %}
+<!-- As a heading -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="form_10kreport" style="color: white;">Financial Report Summarization</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="form_10kreport" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="features" style="color: white;">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about" style="color: white;">About</a>
+            </li>
+          </ul>
+          <span class="navbar-text" style="color: white;">
+              AI-Powered Financial Analysis Tool (Preview Version V1.0)
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td colspan="2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container">
+      <h4>Report Document: </h4>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Company CIK: </th>
+            <td>{{ company_cik }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Year: </th>
+            <td>{{ report_year }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Report Type: </th>
+            <td colspan="2">{{ report_file_type }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Report URL: </th>
+            <td colspan="2"> <a href={{ report_file_url }}>Link</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Report Summary Type: </th>
+            <td colspan="2">{{ report_summary_type }}</td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td colspan="2"></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h4>{{ company_cik }} {{ report_year }} Form {{ report_file_type }} </h4>
+      <h4>{{ report_summary_type }} Summary: </h4>
+      <p class="text-left"></p>{{ generated_summary }}</p>
+        
+    </div>
+
+{% endblock %}
